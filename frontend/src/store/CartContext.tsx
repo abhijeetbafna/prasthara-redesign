@@ -13,7 +13,9 @@ import type { CartItem, Product } from '../types/product'
 interface CartContextValue {
   items: CartItem[]
   itemCount: number
+  totalItems: number
   subtotal: number
+  totalPrice: number
   isOpen: boolean
   openCart: () => void
   closeCart: () => void
@@ -95,7 +97,9 @@ export function CartProvider({ children }: { children: ReactNode }) {
     () => ({
       items,
       itemCount,
+      totalItems: itemCount,
       subtotal,
+      totalPrice: subtotal,
       isOpen,
       openCart,
       closeCart,

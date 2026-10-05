@@ -60,8 +60,8 @@ export function MobileHomePage() {
             <p className="muted">Loading pieces…</p>
           ) : (
             <div className="product-grid">
-              {products.map((product, index) => (
-                <ProductCard key={product.id} product={product} index={index} />
+              {products.map((product) => (
+                <ProductCard key={product.id} product={product} />
               ))}
             </div>
           )}

@@ -37,10 +37,13 @@ export function useProducts(filters?: ProductFilter) {
     filters?.priceMin,
     filters?.priceMax,
     filters?.sort,
+    filters?.searchQuery,
+    filters?.inStockOnly,
   ])
 
   return { products, loading, error }
 }
+
 
 export function useFeaturedProducts() {
   const [products, setProducts] = useState<Product[]>([])
