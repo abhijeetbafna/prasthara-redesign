@@ -4,7 +4,7 @@ import { VitePWA } from 'vite-plugin-pwa'
 
 // GitHub Pages project site: https://Msiddhesh008.github.io/prasthara/
 export default defineConfig({
-  base: '/prasthara/',
+  base: process.env.VITE_BASE || '/',
   plugins: [
     react(),
     VitePWA({
